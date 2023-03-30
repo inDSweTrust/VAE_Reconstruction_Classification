@@ -25,12 +25,12 @@ pip install -r requirements.txt
 ### VAE Reconstruction
 
 ```python
-./train.py -rd path/to/root -dim LATENT_DIM
+.vae_pipeline/train.py -rd path/to/root -dim LATENT_DIM
 ```
 ### Classifier
 
 ```python
-./train.py -p path/to/encoded_data -d LATENT_DIM
+.classifier/train.py -p path/to/encoded_data -d LATENT_DIM
 ```
 ### Usage Instructions
 
