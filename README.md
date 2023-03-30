@@ -17,16 +17,31 @@ The implemented pipeline is shown below. CIFAR10 images are encoded with a VAE, 
 
 ## Install and run project
 
+### Requirements 
+```python
+pip install -r requirements.txt 
+```
+
 ### VAE Reconstruction
 
 ```python
-./train.py -rd path/to/data -dim LATENT_DIM
+./train.py -rd path/to/root -dim LATENT_DIM
 ```
 ### Classifier
 
 ```python
 ./train.py -p path/to/encoded_data -d LATENT_DIM
 ```
+### Usage Instructions
+
+Currently this code is implemented for CIFAR10 only which is fetched from torch.
+
+Reconstruction/Generation:
+- After running the reconstruction code, the encoded latent space and reconstructed/generated images will be saved in the local dir.
+
+Classification:
+- The latent space obtrained from the VAE pipeline is used as input for classification. 
+
 
 ## References
 [1] “Examining the Size of the Latent Space of Convolutional Variational Autoencoders Trained With Spectral Topographic Maps of EEG Frequency Bands”, TAUFIQUE AHMED, LUCA LONGO
